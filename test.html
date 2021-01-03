@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<div ng-app="helloApp" ng-controller="helloController">
+    <p>angularJs双向绑定Demo</p>
+    <span>请输入：</span>
+    <input type="text" ng-model="name">
+    <h2>Hello. {{name}}</h2>
+</div>
+<script src="entry.js" entry></script>
+<script src="./common/oss_pc/widget/angular/angular.min.js"></script>
+<script >
+    (function () {
+        "use strict";
+        angular.module('helloApp', [])
+        .controller("helloController", ["$scope", function ($scope) {
+            $scope.name = "World！"
+        }])
+
+    })()
+</script>
+</body>
+</html>

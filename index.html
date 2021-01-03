@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <base href="/" /> -->
+</head>
+<link rel="stylesheet" href="/css/style.css">
+
+<body>
+  <div ng-app="app" ng-controller="mainctrl">
+    <!--注意 single-spa 中已经创建ui-view,根据__POWERED_BY_QIANKUN__ 判断-->
+    <div ng-if ="!qkFlag" ui-view></div>
+  </div>
+
+
+  <script src="/common/oss_pc/widget/angular/angular.min.js"></script>
+  <script src="/common/oss_pc/widget/angular/angular-ui-router.js"></script>
+  <script src="/common/oss_pc/widget/jquery/jquery-1.9.1.min.js"></script>
+
+
+  <script src="/index.js"></script>
+  <!-- <script src="/ins.js"></script> -->
+
+
+  <!-- 放最后 -->
+  <script src="/single-spa-angular1.js"></script>
+  <script src="/entry.js"></script>
+
+
+</body>
+
+</html>
